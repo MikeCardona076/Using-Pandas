@@ -2,11 +2,27 @@
 #Here is Pandas 
 import pandas as pd
 
-information = {"Name of warrior ":["Mike","Miguel","Elena","Jack","Goku","Pedro"],
-"Power":["1200","200","3900","23445","75678","12346"],
-"Origin":["Earth","Jupiter","Neptune","Earth","Jupiter","Neptune"]
+name = []
+power = []
+origin = []
+
+num_warrirors = int(input("How many warriors are there? "))
+
+for i in range(num_warrirors):
+    name_warrior = input("Insert name of warrior : " )
+    name.append(name_warrior)
+
+    power_warrior = input("Insert power of warrior : " )
+    power.append(power_warrior)
+
+    origin_warrior = input("Insert origin of warrior  : ")
+    origin.append(origin_warrior)
+    i+1
+
+    
+information = {"Name of warrior ":name,
+"Power":power,
+"Origin":origin
 }
-
 df = pd.DataFrame(information)
-
 print(df)
